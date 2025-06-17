@@ -9,6 +9,7 @@
         <module>Utilities</module>
         <module>Dao</module>
         <module>BookManager</module>
+        <module>UserManager</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

@@ -4,34 +4,22 @@
  */
 package hr.algebra;
 
-import hr.algebra.model.User;
-import hr.algebra.view.EditAuthor;
-import hr.algebra.view.EditBooksPanel;
-import hr.algebra.view.EditPublisher;
-import hr.algebra.view.UploadBooksPanel;
+import hr.view.LoginPanel;
+import hr.view.RegisterPanel;
 
 /**
  *
  * @author AdrianBusak
  */
-public class BookManager extends javax.swing.JFrame {
+public class UserManager extends javax.swing.JFrame {
 
-    private static final String UPLOAD_BOOKS = "Upload books";
-    private static final String EDIT_BOOKS = "Edit books";
-    private static final String EDIT_AUTHORS = "Edit authors";
-    private static final String EDIT_PUBLISHERS = "Edit publishers";
-    private User user;
-
+    private static final String LOGIN_PANEL = "Login";
+    private static final String REGISTER_PANEL = "Register";
+    
     /**
-     * Creates new form BookManager
+     * Creates new form UserManager
      */
-    public BookManager() {
-        initComponents();
-        configurePanels();
-    }
-
-    public BookManager(User user) {
-        this.user = user;
+    public UserManager() {
         initComponents();
         configurePanels();
     }
@@ -53,14 +41,14 @@ public class BookManager extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(tpContent, javax.swing.GroupLayout.PREFERRED_SIZE, 1143, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(tpContent, javax.swing.GroupLayout.PREFERRED_SIZE, 470, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(tpContent, javax.swing.GroupLayout.PREFERRED_SIZE, 682, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(tpContent, javax.swing.GroupLayout.PREFERRED_SIZE, 374, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -84,38 +72,31 @@ public class BookManager extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(BookManager.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(UserManager.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(BookManager.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(UserManager.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(BookManager.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(UserManager.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(BookManager.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(UserManager.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new BookManager().setVisible(true);
+                new UserManager().setVisible(true);
             }
         });
     }
-
+    
     private void configurePanels() {
-        if (user.getRole().equals("admin")) {
-            tpContent.add(UPLOAD_BOOKS, new UploadBooksPanel());
-            tpContent.add(EDIT_BOOKS, new EditBooksPanel());
-            tpContent.add(EDIT_AUTHORS, new EditAuthor());
-            tpContent.add(EDIT_PUBLISHERS, new EditPublisher());
-        } else if (user.getRole().equals("user")) {
-            tpContent.add(EDIT_BOOKS, new EditBooksPanel());
-
-        }
-
+            tpContent.add(LOGIN_PANEL, new LoginPanel());
+            tpContent.add(REGISTER_PANEL, new RegisterPanel());
     }
-
+            
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTabbedPane tpContent;
     // End of variables declaration//GEN-END:variables
 }
+

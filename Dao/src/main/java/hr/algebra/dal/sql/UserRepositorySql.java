@@ -16,18 +16,23 @@ public class UserRepositorySql implements UserRepository {
 
     private static final String CREATE_USER = "{ CALL createUser(?, ?, ?, ?) }";
     private static final String CHECK_USER = "{ CALL checkUser(?, ?) }";
+    
+    private static final String USERNAME =  "Username";
+    private static final String PASSWORD =  "Password";
+    private static final String ROLE =  "Role";
+    private static final String USER_ID =  "UserId";
 
     @Override
     public int createUser(User user) throws Exception {
         try (Connection con = DataSourceSingleton.getInstance().getConnection(); CallableStatement stmt = con.prepareCall(CREATE_USER)) {
 
-            stmt.setString(1, user.getUsername());
-            stmt.setString(2, user.getPassword());  // Ako hashaš, zamijeni ovo hashiranom verzijom
-            stmt.setString(3, user.getRole());
-            stmt.registerOutParameter(4, Types.INTEGER);
+            stmt.setString(USERNAME, user.getUsername());
+            stmt.setString(PASSWORD, user.getPassword());
+            stmt.setString(ROLE, user.getRole());
+            stmt.registerOutParameter(USER_ID, Types.INTEGER);
 
             stmt.executeUpdate();
-            return stmt.getInt(4);
+            return stmt.getInt(USER_ID);
         }
     }
 
@@ -35,8 +40,8 @@ public class UserRepositorySql implements UserRepository {
     public Optional<User> checkUser(String username, String password) throws Exception {
         try (Connection con = DataSourceSingleton.getInstance().getConnection(); CallableStatement stmt = con.prepareCall(CHECK_USER)) {
 
-            stmt.setString(1, username);
-            stmt.setString(2, password);
+            stmt.setString(USERNAME, username);
+            stmt.setString(PASSWORD, password);
 
             try (ResultSet rs = stmt.executeQuery()) {
                 if (rs.next()) {
