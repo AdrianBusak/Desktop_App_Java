@@ -20,7 +20,6 @@ import javax.swing.DefaultListModel;
  */
 public class UploadBooksPanel extends javax.swing.JPanel {
 
-   
     public UploadBooksPanel() {
         initComponents();
     }
@@ -76,15 +75,25 @@ public class UploadBooksPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnUploadBooksActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUploadBooksActionPerformed
-        try {
-            List<Book> books = BookParser.parse();
-            repository.createBooks(books);
-            loadModel();
-            
-        } catch (Exception ex) {
-            MessageUtils.showErrorMessage("Unrecoverable error", "Unable to upload books");
-            System.exit(1);
-        }
+        new Thread(() -> {
+            try {
+                List<Book> books = BookParser.parse();
+                repository.createBooks(books);
+
+                java.awt.EventQueue.invokeLater(() -> {
+                    try {
+                        loadModel();
+                    } catch (Exception ex) {
+                        Logger.getLogger(UploadBooksPanel.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                });
+
+            } catch (Exception ex) {
+                java.awt.EventQueue.invokeLater(() -> {
+                    MessageUtils.showErrorMessage("Unrecoverable error", "Unable to upload books");
+                });
+            }
+        }).start();
     }//GEN-LAST:event_btnUploadBooksActionPerformed
 
     private void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown
@@ -112,7 +121,7 @@ public class UploadBooksPanel extends javax.swing.JPanel {
             System.exit(1);
         }
     }
-    
+
     private void loadModel() throws Exception {
         List<Book> books = repository.selectBooks();
         booksModel.clear();
