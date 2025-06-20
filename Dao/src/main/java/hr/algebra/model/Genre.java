@@ -8,7 +8,7 @@ package hr.algebra.model;
  *
  * @author AdrianBusak
  */
-public class Genre {
+public class Genre implements Comparable<Genre> {
     
     private int id;
     private String name;
@@ -39,6 +39,11 @@ public class Genre {
 
     public String getName() {
         return name;
+    }
+
+    @Override
+    public int compareTo(Genre o) {
+        return name.compareTo(o.name);
     }
     
 }

@@ -1,7 +1,6 @@
 package hr.algebra.dal.sql;
 
 import hr.algebra.dal.BookRepository;
-import hr.algebra.model.Article;
 import hr.algebra.model.Book;
 
 import java.sql.CallableStatement;
@@ -127,7 +126,7 @@ public class BookRepositorySql implements BookRepository {
                 stmt.setString(LINK, book.getLink());
                 stmt.setString(DESCRIPTION, book.getDescription());
                 stmt.setString(PICTURE_PATH, book.getPicturePath());
-                stmt.setString(PUBLISHED_DATE, book.getPublishedDate().format(Article.DATE_FORMATTER));
+                stmt.setString(PUBLISHED_DATE, book.getPublishedDate().format(Book.DATE_FORMATTER));
                 stmt.registerOutParameter(ID_BOOK, Types.INTEGER);
 
                 stmt.executeUpdate();

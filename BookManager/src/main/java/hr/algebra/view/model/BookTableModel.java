@@ -4,9 +4,7 @@
  */
 package hr.algebra.view.model;
 
-import hr.algebra.model.Article;
 import hr.algebra.model.Book;
-import java.util.Arrays;
 import java.util.List;
 import javax.swing.table.AbstractTableModel;
 

@@ -2,7 +2,6 @@ package hr.algebra.parsers.rss;
 
 import hr.algebra.factory.ParserFactory;
 import hr.algebra.factory.UrlConnectionFactory;
-import hr.algebra.model.Article;
 import hr.algebra.model.Book;
 import hr.algebra.utilities.FileUtils;
 

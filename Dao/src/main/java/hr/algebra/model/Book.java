@@ -6,12 +6,16 @@ package hr.algebra.model;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Set;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 
 /**
  *
  * @author AdrianBusak
  */
-public class Book {
+@XmlAccessorType(XmlAccessType.FIELD)
+public class Book implements Comparable<Book> {
 
     private int id;
     private String title;
@@ -94,6 +98,11 @@ public class Book {
     @Override
     public String toString() {
         return id + " - " + title;
+    }
+
+    @Override
+    public int compareTo(Book o) {
+        return title.compareTo(o.title);
     }
 
 }

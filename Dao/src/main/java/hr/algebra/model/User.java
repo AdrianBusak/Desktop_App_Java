@@ -4,10 +4,16 @@
  */
 package hr.algebra.model;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+
 /**
  *
  * @author AdrianBusak
  */
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 public class User {
     private int id;
     private String username;
@@ -25,6 +31,17 @@ public class User {
         this.username = firstName;
         this.password = password;
         this.role = role;
+    }
+
+    public User() {
+    }
+    
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
     
     public String getUsername() {

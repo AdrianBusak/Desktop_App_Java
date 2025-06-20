@@ -11,7 +11,7 @@ import java.time.format.DateTimeFormatter;
  *
  * @author AdrianBusak
  */
-public class Author {
+public class Author implements Comparable<Author>{
 
     private int id;
     private String firstName;
@@ -35,6 +35,10 @@ public class Author {
         this.dateBirth = dateBirth;
         this.picturePath = picturePath;
     }
+
+    public Author() {
+    }
+    
 
     public int getId() {
         return id;
@@ -75,4 +79,16 @@ public class Author {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
+
+    @Override
+    public String toString() {
+        return "Author{" + "id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + '}';
+    }
+
+    @Override
+    public int compareTo(Author o) {
+        return dateBirth.compareTo(o.dateBirth);
+    }
+    
+    
 }

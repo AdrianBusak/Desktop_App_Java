@@ -4,11 +4,17 @@
  */
 package hr.algebra;
 
+import hr.algebra.dal.BookRepository;
+import hr.algebra.dal.DataRepository;
+import hr.algebra.dal.RepositoryFactory;
 import hr.algebra.model.User;
+import hr.algebra.view.DragAndDrop;
 import hr.algebra.view.EditAuthor;
 import hr.algebra.view.EditBooksPanel;
 import hr.algebra.view.EditPublisher;
 import hr.algebra.view.UploadBooksPanel;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -20,7 +26,9 @@ public class BookManager extends javax.swing.JFrame {
     private static final String EDIT_BOOKS = "Edit books";
     private static final String EDIT_AUTHORS = "Edit authors";
     private static final String EDIT_PUBLISHERS = "Edit publishers";
+    private static final String DRAG_AND_DROP = "Drag and drop";
     private User user;
+    private DataRepository repository;
 
     /**
      * Creates new form BookManager
@@ -34,6 +42,7 @@ public class BookManager extends javax.swing.JFrame {
         this.user = user;
         initComponents();
         configurePanels();
+        initRepository();
     }
 
     /**
@@ -46,26 +55,91 @@ public class BookManager extends javax.swing.JFrame {
     private void initComponents() {
 
         tpContent = new javax.swing.JTabbedPane();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        mExit = new javax.swing.JMenu();
+        miExit = new javax.swing.JMenu();
+        mClearDatabase = new javax.swing.JMenu();
+        miClearData = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        mExit.setText("Exit");
+        mExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mExitActionPerformed(evt);
+            }
+        });
+
+        miExit.setText("Exit");
+        miExit.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                miExitMouseClicked(evt);
+            }
+        });
+        mExit.add(miExit);
+
+        jMenuBar1.add(mExit);
+
+        mClearDatabase.setText("Clear database");
+
+        miClearData.setText("Clear");
+        miClearData.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                miClearDataMouseClicked(evt);
+            }
+        });
+        miClearData.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                miClearDataActionPerformed(evt);
+            }
+        });
+        mClearDatabase.add(miClearData);
+
+        jMenuBar1.add(mClearDatabase);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(tpContent, javax.swing.GroupLayout.PREFERRED_SIZE, 1143, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(tpContent, javax.swing.GroupLayout.PREFERRED_SIZE, 1222, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 12, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(tpContent, javax.swing.GroupLayout.PREFERRED_SIZE, 682, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addComponent(tpContent, javax.swing.GroupLayout.PREFERRED_SIZE, 709, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void mExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mExitActionPerformed
+    }//GEN-LAST:event_mExitActionPerformed
+
+    private void miExitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_miExitMouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_miExitMouseClicked
+
+    private void miClearDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miClearDataActionPerformed
+        try {
+            repository.clearAllData();
+        } catch (Exception ex) {
+            Logger.getLogger(BookManager.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_miClearDataActionPerformed
+
+    private void miClearDataMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_miClearDataMouseClicked
+        try {
+            repository.clearAllData();
+        } catch (Exception ex) {
+            Logger.getLogger(BookManager.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        System.exit(0);
+    }//GEN-LAST:event_miClearDataMouseClicked
 
     /**
      * @param args the command line arguments
@@ -108,14 +182,24 @@ public class BookManager extends javax.swing.JFrame {
             tpContent.add(EDIT_BOOKS, new EditBooksPanel());
             tpContent.add(EDIT_AUTHORS, new EditAuthor());
             tpContent.add(EDIT_PUBLISHERS, new EditPublisher());
+            tpContent.add(DRAG_AND_DROP, new DragAndDrop(user));
         } else if (user.getRole().equals("user")) {
             tpContent.add(EDIT_BOOKS, new EditBooksPanel());
-
+            tpContent.add(DRAG_AND_DROP, new DragAndDrop(user));
         }
 
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenu mClearDatabase;
+    private javax.swing.JMenu mExit;
+    private javax.swing.JMenuItem miClearData;
+    private javax.swing.JMenu miExit;
     private javax.swing.JTabbedPane tpContent;
     // End of variables declaration//GEN-END:variables
+
+    private void initRepository() {
+        repository = RepositoryFactory.getRepository(DataRepository.class);
+    }
 }

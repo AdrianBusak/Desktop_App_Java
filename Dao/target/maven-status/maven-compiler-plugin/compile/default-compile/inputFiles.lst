@@ -1,6 +1,7 @@
 C:\Users\AdrianBusak\Desktop\Java\ABusakJavaProject\Dao\src\main\java\hr\algebra\model\BookUser.java
 C:\Users\AdrianBusak\Desktop\Java\ABusakJavaProject\Dao\src\main\java\hr\algebra\model\User.java
 C:\Users\AdrianBusak\Desktop\Java\ABusakJavaProject\Dao\src\main\java\hr\algebra\dal\sql\BookUserRepositorySql.java
+C:\Users\AdrianBusak\Desktop\Java\ABusakJavaProject\Dao\src\main\java\hr\algebra\model\UserFavorites.java
 C:\Users\AdrianBusak\Desktop\Java\ABusakJavaProject\Dao\src\main\java\hr\algebra\model\BookPublisher.java
 C:\Users\AdrianBusak\Desktop\Java\ABusakJavaProject\Dao\src\main\java\hr\algebra\model\Publisher.java
 C:\Users\AdrianBusak\Desktop\Java\ABusakJavaProject\Dao\src\main\java\hr\algebra\dal\BookUserRepository.java
@@ -10,7 +11,6 @@ C:\Users\AdrianBusak\Desktop\Java\ABusakJavaProject\Dao\src\main\java\hr\algebra
 C:\Users\AdrianBusak\Desktop\Java\ABusakJavaProject\Dao\src\main\java\hr\algebra\model\BookAuthor.java
 C:\Users\AdrianBusak\Desktop\Java\ABusakJavaProject\Dao\src\main\java\hr\algebra\dal\sql\DataSourceSingleton.java
 C:\Users\AdrianBusak\Desktop\Java\ABusakJavaProject\Dao\src\main\java\hr\algebra\dal\sql\BookPublisherRepositorySql.java
-C:\Users\AdrianBusak\Desktop\Java\ABusakJavaProject\Dao\src\main\java\hr\algebra\dal\Repository.java
 C:\Users\AdrianBusak\Desktop\Java\ABusakJavaProject\Dao\src\main\java\hr\algebra\dal\sql\AuthorRepositorySql.java
 C:\Users\AdrianBusak\Desktop\Java\ABusakJavaProject\Dao\src\main\java\hr\algebra\model\BookGenre.java
 C:\Users\AdrianBusak\Desktop\Java\ABusakJavaProject\Dao\src\main\java\hr\algebra\dal\BookAuthorRepository.java
@@ -20,13 +20,15 @@ C:\Users\AdrianBusak\Desktop\Java\ABusakJavaProject\Dao\src\main\java\hr\algebra
 C:\Users\AdrianBusak\Desktop\Java\ABusakJavaProject\Dao\src\main\java\hr\algebra\dal\RepositoryFactory.java
 C:\Users\AdrianBusak\Desktop\Java\ABusakJavaProject\Dao\src\main\java\hr\algebra\model\Genre.java
 C:\Users\AdrianBusak\Desktop\Java\ABusakJavaProject\Dao\src\main\java\hr\algebra\dal\BookGenreRepository.java
+C:\Users\AdrianBusak\Desktop\Java\ABusakJavaProject\Dao\src\main\java\hr\algebra\model\BookArchive.java
+C:\Users\AdrianBusak\Desktop\Java\ABusakJavaProject\Dao\src\main\java\hr\algebra\dal\sql\DataRepositorySql.java
 C:\Users\AdrianBusak\Desktop\Java\ABusakJavaProject\Dao\src\main\java\hr\algebra\dal\sql\BookAuthorRepositorySql.java
 C:\Users\AdrianBusak\Desktop\Java\ABusakJavaProject\Dao\src\main\java\hr\algebra\dal\sql\BookRepositorySql.java
-C:\Users\AdrianBusak\Desktop\Java\ABusakJavaProject\Dao\src\main\java\hr\algebra\dal\sql\SqlRepository.java
+C:\Users\AdrianBusak\Desktop\Java\ABusakJavaProject\Dao\src\main\java\hr\algebra\model\BookTransferable.java
 C:\Users\AdrianBusak\Desktop\Java\ABusakJavaProject\Dao\src\main\java\hr\algebra\model\Book.java
-C:\Users\AdrianBusak\Desktop\Java\ABusakJavaProject\Dao\src\main\java\hr\algebra\model\Article.java
 C:\Users\AdrianBusak\Desktop\Java\ABusakJavaProject\Dao\src\main\java\hr\algebra\dal\sql\UserRepositorySql.java
 C:\Users\AdrianBusak\Desktop\Java\ABusakJavaProject\Dao\src\main\java\hr\algebra\dal\AuthorRepository.java
 C:\Users\AdrianBusak\Desktop\Java\ABusakJavaProject\Dao\src\main\java\hr\algebra\dal\PublisherRepository.java
 C:\Users\AdrianBusak\Desktop\Java\ABusakJavaProject\Dao\src\main\java\hr\algebra\dal\UserRepository.java
+C:\Users\AdrianBusak\Desktop\Java\ABusakJavaProject\Dao\src\main\java\hr\algebra\dal\DataRepository.java
 C:\Users\AdrianBusak\Desktop\Java\ABusakJavaProject\Dao\src\main\java\hr\algebra\dal\sql\PublisherRepositorySql.java
