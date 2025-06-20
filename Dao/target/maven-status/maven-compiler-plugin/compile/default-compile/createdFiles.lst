@@ -1,5 +1,6 @@
 hr\algebra\model\BookAuthor.class
 hr\algebra\dal\BookAuthorRepository.class
+hr\algebra\model\LocalDateAdapter.class
 hr\algebra\model\BookGenre.class
 hr\algebra\model\UserFavorites.class
 hr\algebra\dal\sql\BookUserRepositorySql.class

@@ -11,13 +11,13 @@ import hr.algebra.utilities.FileUtils;
 import hr.algebra.utilities.IconUtils;
 import hr.algebra.utilities.MessageUtils;
 import hr.algebra.view.model.AuthorTableModel;
-import java.util.List;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.time.LocalDate;
-import java.util.Arrays;
+import java.util.LinkedHashMap;
+import java.util.Map;
 import java.util.Optional;
 import java.util.UUID;
 import java.util.logging.Level;
@@ -34,8 +34,7 @@ public class EditAuthor extends javax.swing.JPanel {
 
     private static final String DIR = "assets";
 
-    private List<JTextComponent> validationFields;
-    private List<JLabel> errorLabels;
+    private Map<JTextComponent, JLabel> validationFields;
 
     private AuthorRepository repository;
     private AuthorTableModel authorTableModel;
@@ -60,13 +59,13 @@ public class EditAuthor extends javax.swing.JPanel {
         lbIcon = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         tfFirstName = new javax.swing.JTextField();
-        lbTitleError = new javax.swing.JLabel();
+        lbFirstNameError = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         tfLastName = new javax.swing.JTextField();
-        lbLinkError = new javax.swing.JLabel();
+        lbLastNameError = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         tfBirthDate = new javax.swing.JTextField();
-        lbPublishedDateError = new javax.swing.JLabel();
+        lbBirthDateError = new javax.swing.JLabel();
         tfPicturePath = new javax.swing.JTextField();
         btnChooseImage = new javax.swing.JButton();
         btnAdd = new javax.swing.JButton();
@@ -107,20 +106,20 @@ public class EditAuthor extends javax.swing.JPanel {
 
         jLabel2.setText("Name");
 
-        lbTitleError.setForeground(new java.awt.Color(204, 0, 0));
-        lbTitleError.setText("X");
+        lbFirstNameError.setForeground(new java.awt.Color(204, 0, 0));
+        lbFirstNameError.setText("X");
 
         jLabel4.setText("Last name");
 
-        lbLinkError.setForeground(new java.awt.Color(204, 0, 0));
-        lbLinkError.setText("X");
+        lbLastNameError.setForeground(new java.awt.Color(204, 0, 0));
+        lbLastNameError.setText("X");
 
         jLabel8.setText("Birth date");
 
         tfBirthDate.setName("Date"); // NOI18N
 
-        lbPublishedDateError.setForeground(new java.awt.Color(204, 0, 0));
-        lbPublishedDateError.setText("X");
+        lbBirthDateError.setForeground(new java.awt.Color(204, 0, 0));
+        lbBirthDateError.setText("X");
 
         tfPicturePath.setEditable(false);
 
@@ -178,7 +177,7 @@ public class EditAuthor extends javax.swing.JPanel {
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(12, 12, 12)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(lbTitleError, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lbFirstNameError, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                             .addComponent(btnDelete, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -192,9 +191,9 @@ public class EditAuthor extends javax.swing.JPanel {
                                                     .addComponent(tfBirthDate)
                                                     .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 223, Short.MAX_VALUE))
                                                 .addGap(18, 18, 18)
-                                                .addComponent(lbPublishedDateError, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                .addComponent(lbBirthDateError, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(lbLinkError, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                        .addComponent(lbLastNameError, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                         .addGap(18, 18, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(lbIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -215,19 +214,19 @@ public class EditAuthor extends javax.swing.JPanel {
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lbTitleError, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbFirstNameError, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(tfFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lbLinkError, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbLastNameError, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(tfLastName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lbPublishedDateError, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbBirthDateError, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(tfBirthDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -366,11 +365,11 @@ public class EditAuthor extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lbBirthDateError;
+    private javax.swing.JLabel lbFirstNameError;
     private javax.swing.JLabel lbIcon;
-    private javax.swing.JLabel lbLinkError;
+    private javax.swing.JLabel lbLastNameError;
     private javax.swing.JLabel lbPicturePathError;
-    private javax.swing.JLabel lbPublishedDateError;
-    private javax.swing.JLabel lbTitleError;
     private javax.swing.JTable tbAuthors;
     private javax.swing.JTextField tfBirthDate;
     private javax.swing.JTextField tfFirstName;
@@ -392,12 +391,15 @@ public class EditAuthor extends javax.swing.JPanel {
     }
 
     private void initValidation() {
-        validationFields = Arrays.asList(tfFirstName, tfLastName, tfBirthDate, tfPicturePath);
-        errorLabels = Arrays.asList(lbTitleError, lbLinkError, lbPublishedDateError, lbPicturePathError);
+        validationFields = new LinkedHashMap<JTextComponent, JLabel>();
+        validationFields.put(tfFirstName, lbFirstNameError);
+        validationFields.put(tfLastName, lbLastNameError);
+        validationFields.put(tfBirthDate, lbBirthDateError);
+        validationFields.put(tfPicturePath, lbPicturePathError);
     }
 
     private void hideErrors() {
-        errorLabels.forEach(e -> e.setVisible(false));
+        validationFields.values().forEach(e -> e.setVisible(false));
     }
 
     private void initRepository() throws Exception {
@@ -414,26 +416,36 @@ public class EditAuthor extends javax.swing.JPanel {
 
     private boolean formValid() {
         hideErrors();
-        boolean ok = true;
-        for (int i = 0; i < validationFields.size(); i++) {
-            ok &= !validationFields.get(i).getText().trim().isEmpty();
-            errorLabels.get(i).setVisible(validationFields.get(i).getText().trim().isEmpty());
-            if ("Date".equals(validationFields.get(i).getName())) {
+        boolean isValid = true;
+
+        for (Map.Entry<JTextComponent, JLabel> entry : validationFields.entrySet()) {
+            JTextComponent field = entry.getKey();
+            JLabel errorLabel = entry.getValue();
+
+            boolean empty = field.getText().trim().isEmpty();
+            boolean dateInvalid = false;
+
+            if ("Date".equals(field.getName()) && !empty) {
                 try {
-                    System.out.println("Trying to parse: '" + validationFields.get(i).getText().trim() + "'");
-                    LocalDate.parse(validationFields.get(i).getText().trim(), Author.DATE_FORMATTER);
+                    LocalDate.parse(field.getText().trim(), Author.DATE_FORMATTER);
                 } catch (Exception e) {
-                    ok = false;
-                    errorLabels.get(i).setVisible(true);
+                    dateInvalid = true;
                 }
             }
+
+            boolean showError = empty || dateInvalid;
+            if (showError) {
+                errorLabel.setVisible(true);
+                isValid = false;
+            }
         }
-        return ok;
+
+        return isValid;
     }
 
     private void clearForm() {
         hideErrors();
-        validationFields.forEach(e -> e.setText(""));
+        validationFields.keySet().forEach(e -> e.setText(""));
         lbIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/no_image.png")));
         selectedAuthor = null;
     }

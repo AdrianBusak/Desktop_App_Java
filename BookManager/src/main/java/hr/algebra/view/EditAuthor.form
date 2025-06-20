@@ -39,7 +39,7 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="lbTitleError" min="-2" pref="20" max="-2" attributes="0"/>
+                                  <Component id="lbFirstNameError" min="-2" pref="20" max="-2" attributes="0"/>
                                   <Group type="102" alignment="1" attributes="0">
                                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
                                           <Component id="btnDelete" max="32767" attributes="0"/>
@@ -55,11 +55,11 @@
                                                   <Component id="jLabel8" alignment="1" pref="223" max="32767" attributes="0"/>
                                               </Group>
                                               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                                              <Component id="lbPublishedDateError" min="-2" pref="20" max="-2" attributes="0"/>
+                                              <Component id="lbBirthDateError" min="-2" pref="20" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="lbLinkError" min="-2" pref="20" max="-2" attributes="0"/>
+                                      <Component id="lbLastNameError" min="-2" pref="20" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -90,21 +90,21 @@
                       <Component id="jLabel2" min="-2" pref="25" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="lbTitleError" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                          <Component id="lbFirstNameError" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                           <Component id="tfFirstName" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel4" min="-2" pref="25" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="lbLinkError" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                          <Component id="lbLastNameError" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                           <Component id="tfLastName" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel8" min="-2" pref="25" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="lbPublishedDateError" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                          <Component id="lbBirthDateError" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                           <Component id="tfBirthDate" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -175,7 +175,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="tfFirstName">
     </Component>
-    <Component class="javax.swing.JLabel" name="lbTitleError">
+    <Component class="javax.swing.JLabel" name="lbFirstNameError">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="0" green="0" red="cc" type="rgb"/>
@@ -190,7 +190,7 @@
     </Component>
     <Component class="javax.swing.JTextField" name="tfLastName">
     </Component>
-    <Component class="javax.swing.JLabel" name="lbLinkError">
+    <Component class="javax.swing.JLabel" name="lbLastNameError">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="0" green="0" red="cc" type="rgb"/>
@@ -208,7 +208,7 @@
         <Property name="name" type="java.lang.String" value="Date" noResource="true"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lbPublishedDateError">
+    <Component class="javax.swing.JLabel" name="lbBirthDateError">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="0" green="0" red="cc" type="rgb"/>

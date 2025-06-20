@@ -36,6 +36,7 @@ hr\algebra\BookManager.class
 hr\algebra\view\DragAndDrop$3.class
 hr\algebra\view\EditGenre$4.class
 hr\algebra\BookManager$2.class
+hr\algebra\view\EditBooksPanel$8.class
 hr\algebra\view\UploadBooksPanel$1.class
 hr\algebra\view\model\GenreTableModel.class
 hr\algebra\view\EditPublisher$1.class

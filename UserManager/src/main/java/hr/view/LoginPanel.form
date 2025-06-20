@@ -30,9 +30,9 @@
                   <Component id="jLabel2" alignment="0" min="-2" pref="62" max="-2" attributes="0"/>
                   <Component id="jLabel3" alignment="0" min="-2" pref="62" max="-2" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                          <Component id="btnLogin" alignment="0" max="32767" attributes="0"/>
-                          <Component id="tfPassword" alignment="0" min="-2" pref="178" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="btnLogin" pref="178" max="32767" attributes="0"/>
+                          <Component id="tfPassword" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="lbPasswordError" min="-2" pref="37" max="-2" attributes="0"/>
@@ -61,9 +61,12 @@
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="tfPassword" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="lbPasswordError" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="lbPasswordError" min="-2" pref="28" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="3" pref="3" max="-2" attributes="0"/>
+                      <Component id="tfPassword" max="32767" attributes="0"/>
+                  </Group>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="btnLogin" min="-2" pref="35" max="-2" attributes="0"/>
@@ -118,12 +121,12 @@
     </Component>
     <Component class="javax.swing.JTextField" name="tfUsername">
     </Component>
-    <Component class="javax.swing.JTextField" name="tfPassword">
-    </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
         <Property name="text" type="java.lang.String" value="Username"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JPasswordField" name="tfPassword">
     </Component>
   </SubComponents>
 </Form>

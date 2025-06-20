@@ -161,6 +161,7 @@ public class DragAndDrop extends javax.swing.JPanel {
             UserFavorites userFavorites = new UserFavorites(user.getUsername(), favorites);
             JAXBUtils.save(userFavorites, FILENAME);
         } catch (JAXBException ex) {
+            MessageUtils.showErrorMessage("Error", "Error with saving xml.");
             Logger.getLogger(DragAndDrop.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_btnSaveActionPerformed
@@ -209,7 +210,7 @@ public class DragAndDrop extends javax.swing.JPanel {
         List<Book> allBooks = bookRepo.selectBooks();
 
         if (allBooks.isEmpty()) {
-            showInfoDialog("No books found in the repository.");
+            MessageUtils.showInformationMessage("Repository","No books found in the repository.");
         } else {
             allBooks.forEach(booksModel::addElement);
         }
@@ -231,14 +232,6 @@ public class DragAndDrop extends javax.swing.JPanel {
 
         lsFavoriteBooks.setDropMode(DropMode.ON);
         lsFavoriteBooks.setTransferHandler(new ImportTransferHandler());
-    }
-
-    private void showInfoDialog(String message) {
-        JDialog dialog = new JDialog((JFrame) SwingUtilities.getWindowAncestor(this), "Info", true);
-        dialog.add(new JLabel(message, JLabel.CENTER));
-        dialog.setSize(300, 100);
-        dialog.setLocationRelativeTo(this);
-        dialog.setVisible(true);
     }
 
     private class ExportTransferHandler extends TransferHandler {

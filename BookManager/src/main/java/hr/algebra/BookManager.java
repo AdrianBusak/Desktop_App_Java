@@ -58,7 +58,7 @@ public class BookManager extends javax.swing.JFrame {
         tpContent = new javax.swing.JTabbedPane();
         jMenuBar1 = new javax.swing.JMenuBar();
         mExit = new javax.swing.JMenu();
-        miExit = new javax.swing.JMenu();
+        miExit = new javax.swing.JMenuItem();
         mClearDatabase = new javax.swing.JMenu();
         miClearData = new javax.swing.JMenuItem();
 
@@ -71,10 +71,11 @@ public class BookManager extends javax.swing.JFrame {
             }
         });
 
+        miExit.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_ESCAPE, 0));
         miExit.setText("Exit");
-        miExit.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                miExitMouseClicked(evt);
+        miExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                miExitActionPerformed(evt);
             }
         });
         mExit.add(miExit);
@@ -83,6 +84,7 @@ public class BookManager extends javax.swing.JFrame {
 
         mClearDatabase.setText("Clear database");
 
+        miClearData.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_D, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         miClearData.setText("Clear");
         miClearData.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -121,10 +123,6 @@ public class BookManager extends javax.swing.JFrame {
     private void mExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mExitActionPerformed
     }//GEN-LAST:event_mExitActionPerformed
 
-    private void miExitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_miExitMouseClicked
-        System.exit(0);
-    }//GEN-LAST:event_miExitMouseClicked
-
     private void miClearDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miClearDataActionPerformed
         try {
             repository.clearAllData();
@@ -140,6 +138,10 @@ public class BookManager extends javax.swing.JFrame {
             Logger.getLogger(BookManager.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_miClearDataMouseClicked
+
+    private void miExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miExitActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_miExitActionPerformed
 
     /**
      * @param args the command line arguments
@@ -183,7 +185,7 @@ public class BookManager extends javax.swing.JFrame {
     private javax.swing.JMenu mClearDatabase;
     private javax.swing.JMenu mExit;
     private javax.swing.JMenuItem miClearData;
-    private javax.swing.JMenu miExit;
+    private javax.swing.JMenuItem miExit;
     private javax.swing.JTabbedPane tpContent;
     // End of variables declaration//GEN-END:variables
 
