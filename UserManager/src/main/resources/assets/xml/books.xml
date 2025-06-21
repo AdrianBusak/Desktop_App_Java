@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<booksArchive>
+    <books>
+        <id>1</id>
+        <title>Martin Amis: An Appreciation</title>
+        <description>Martin Amis in 2007.</description>
+        <link>https://www.nytimes.com/2023/05/22/books/review/martin-amis.html</link>
+        <publishDate>2023-05-22T23:58:44</publishDate>
+        <picturePath>assets\bfbb0db3-cb2f-4fab-99ad-99018511effb.jpg</picturePath>
+    </books>
+    <books>
+        <id>2</id>
+        <title>Book Review: ‘NB by J.C.,’ by James Campbell</title>
+        <description>“NB by J.C.” collects the variegated musings of James Campbell in the Times Literary Supplement.</description>
+        <link>https://www.nytimes.com/2023/05/22/books/james-campbell-nb-by-jc.html</link>
+        <publishDate>2023-05-22T10:54:20</publishDate>
+    </books>
+    <books>
+        <id>3</id>
+        <title>In ‘Fires in the Dark,’ Kay Redfield Jamison Turns to Healers</title>
+        <description>When Kay Redfield Jamison started to write about her own experiences with mental illness, she met people who felt her writing had changed their lives. She also received a lot of rejection.</description>
+        <link>https://www.nytimes.com/2023/05/22/books/fires-in-the-dark-kay-redfield-jamison.html</link>
+        <publishDate>2023-05-22T14:18:12</publishDate>
+        <picturePath>assets\3dbe1b7b-09dd-4d56-b071-594dc0be18ff.jpg</picturePath>
+    </books>
+    <books>
+        <id>4</id>
+        <title>The Detective Novel ‘Whose Body?,’ by Dorothy L. Sayers, Turns 100</title>
+        <description>Dorothy L. Sayers at the Detection Club, a society of crime writers that she helped establish.</description>
+        <link>https://www.nytimes.com/2023/05/21/books/review/dorothy-sayers-whose-body-at-100.html</link>
+        <publishDate>2023-05-21T09:00:12</publishDate>
+        <picturePath>assets\35d46df3-94be-4137-a671-b5d3d08b8584.jpg</picturePath>
+    </books>
+    <books>
+        <id>5</id>
+        <title>Book Review: ‘Dom Casmurro,’ by Machado de Assis</title>
+        <description>“Dom Casmurro,” by Machado de Assis, teaches us to read — and reread — with precise detail and masterly obfuscation.</description>
+        <link>https://www.nytimes.com/2023/05/22/books/review/machado-de-assis-dom-casmurro.html</link>
+        <publishDate>2023-05-22T09:00:23</publishDate>
+    </books>
+    <books>
+        <id>6</id>
+        <title>Book Review: ‘The Late Americans,’ by Brandon Taylor</title>
+        <description>Brandon Taylor’s novel circulates among Iowa City residents, some privileged, some not, but all aware that their possibilities are contracting.</description>
+        <link>https://www.nytimes.com/2023/05/21/books/review-the-late-americans-brandon-taylor.html</link>
+        <publishDate>2023-05-21T09:00:07</publishDate>
+    </books>
+    <books>
+        <id>7</id>
+        <title>Martin Amis’s Best Books: A Guide</title>
+        <description>Martin Amis in 2012 at his home in Brooklyn. He published 15 novels, which drew acclaim for their wit and linguistic ingenuity.</description>
+        <link>https://www.nytimes.com/2023/05/20/books/best-martin-amis-books.html</link>
+        <publishDate>2023-05-20T22:30:41</publishDate>
+        <picturePath>assets\df65057a-d7f4-43a4-9c01-8b219871d65d.jpg</picturePath>
+    </books>
+    <books>
+        <id>8</id>
+        <title>The Best Romance Novels of 2024 (So Far)</title>
+        <description>Looking for an escapist love story? Here are 2024’s sexiest, swooniest reads.</description>
+        <link>https://www.nytimes.com/article/best-romance-books.html</link>
+        <publishDate>2024-10-01T20:33:10</publishDate>
+        <picturePath>assets\6d337a0e-2c94-4ec7-94d2-fd6ce8c3b205.jpg</picturePath>
+    </books>
+    <books>
+        <id>9</id>
+        <title>What Book Should You Read Next?</title>
+        <description>Finding a book you’ll love can be daunting. Let us help.</description>
+        <link>https://www.nytimes.com/article/best-books.html</link>
+        <publishDate>2024-09-04T20:58:55</publishDate>
+        <picturePath>assets\1321e496-429a-40d9-9321-8c63d4f07d98.jpg</picturePath>
+    </books>
+    <books>
+        <id>10</id>
+        <title>Book Review: ‘The Silk Road,’ by Christopher Wilton-Steer</title>
+        <description>A new book of photographs captures the landscapes, buildings and faces along the route that once conveyed untold wealth between Europe and China.</description>
+        <link>https://www.nytimes.com/2025/06/20/books/review/the-silk-road-christopher-wilton-steer.html</link>
+        <publishDate>2025-06-20T09:01:18</publishDate>
+    </books>
+    <books>
+        <id>11</id>
+        <title>the Writer-Director Larry Charles Tells Tales of Working on ‘Borat’ and ‘Curb’</title>
+        <description>“I’ve always been attracted to the transgressive,” says Larry Charles, the author of “Comedy Samurai.”</description>
+        <link>https://www.nytimes.com/2025/06/20/books/review/larry-charles-comedy-samurai.html</link>
+        <publishDate>2025-06-20T14:32:44</publishDate>
+        <picturePath>assets\5e431134-dcfa-49c5-9e22-c87bd8be1db8.jpg</picturePath>
+    </books>
+    <books>
+        <id>12</id>
+        <title>Best Books About Witches</title>
+        <description>The fantasy author Charlie Jane Anders recommends some of her favorite, most magical books.</description>
+        <link>https://www.nytimes.com/2025/06/20/books/witch-books.html</link>
+        <publishDate>2025-06-20T09:00:25</publishDate>
+        <picturePath>assets\78ba06ba-5a2e-45fa-8a42-8c642e341b61.jpg</picturePath>
+    </books>
+    <books>
+        <id>13</id>
+        <title>Book Review: ‘I’ll Be Right Here,’ by Amy Bloom</title>
+        <description>Two of the historical figures who play parts in Amy Bloom’s new novel are, from left, the writer Colette (circa 1905) and the jewelry designer Suzanne Belperron (in 1933).</description>
+        <link>https://www.nytimes.com/2025/06/20/books/review/amy-bloom-ill-be-right-here.html</link>
+        <publishDate>2025-06-20T09:00:25</publishDate>
+        <picturePath>assets\fcfb1337-48ff-4006-8d97-ba5f16bf5e62.jpg</picturePath>
+    </books>
+    <books>
+        <id>14</id>
+        <title>Book Review: “Graciela in the Abyss,” by Meg Medina, and “Blood in the Water,” by Tiffany D. Jackson</title>
+        <description>Visit the aquatic hereafter in a fantasy, then track down threats on Martha’s Vineyard in a taut contemporary suspense novel.</description>
+        <link>https://www.nytimes.com/2025/06/20/books/review/meg-medina-graciela-in-the-abyss-tiffany-d-jackson-blood-in-the-water.html</link>
+        <publishDate>2025-06-20T09:00:04</publishDate>
+    </books>
+    <books>
+        <id>15</id>
+        <title>8 New Books We Recommend This Week</title>
+        <description>Suggested reading from critics and editors at The New York Times.</description>
+        <link>https://www.nytimes.com/2025/06/19/books/review/new-books-recommendations.html</link>
+        <publishDate>2025-06-19T18:00:06</publishDate>
+    </books>
+    <books>
+        <id>16</id>
+        <title>Book Review: ‘The Palm-Wine Drinkard,’ by Amos Tutuola</title>
+        <description>With folk traditions and sui generis prose, Amos Tutuola enthralled readers with his magic realist novel “The Palm-Wine Drinkard.”</description>
+        <link>https://www.nytimes.com/2025/06/19/books/review/amos-tutuola-palm-wine-drinkard.html</link>
+        <publishDate>2025-06-20T00:05:06</publishDate>
+    </books>
+    <books>
+        <id>17</id>
+        <title>Best Fake Dating Romance Books, According to Jasmine Guillory</title>
+        <description>Feigned love leads to real connections in these funny, joyful and deeply romantic books.</description>
+        <link>https://www.nytimes.com/2025/06/19/books/fake-dating-romance-books.html</link>
+        <publishDate>2025-06-19T09:00:32</publishDate>
+        <picturePath>assets\6f7bfb59-1af5-494c-b65d-01dddfd39f89.jpg</picturePath>
+    </books>
+    <books>
+        <id>18</id>
+        <title>Interview: Stephen Fry on Greek Mythology and His Favorite Books</title>
+        <description>“I try to fight this lamentable tendency,” he says, but now reads more nonfiction than fiction. “Odyssey” is the fourth in his series on Greek mythology.</description>
+        <link>https://www.nytimes.com/2025/06/19/books/review/stephen-fry-odyssey.html</link>
+        <publishDate>2025-06-19T09:00:25</publishDate>
+        <picturePath>assets\e57d3b8b-c75a-4bca-870b-137bc7b3c235.jpg</picturePath>
+    </books>
+    <books>
+        <id>19</id>
+        <title>Vicki Goldberg Dies at 88; Saw Photography Through a Literary Lens</title>
+        <description>An influential photography critic, she wrote essays, newspaper columns and books, including a notable biography of the photojournalist Margaret Bourke-White.</description>
+        <link>https://www.nytimes.com/2025/06/18/arts/vicki-goldberg-dead.html</link>
+        <publishDate>2025-06-18T20:03:35</publishDate>
+    </books>
+    <books>
+        <id>20</id>
+        <title>A Teenage Soldier’s Wartime Scrapbook Inspired His Granddaughter’s First Novel</title>
+        <description>“I wanted to see what happens in the space where biography and fiction collide,” Heather Clark said of the decision to write “The Scrapbook,” her first novel.</description>
+        <link>https://www.nytimes.com/2025/06/18/books/review/the-scrapbook-heather-clark.html</link>
+        <publishDate>2025-06-19T05:01:32</publishDate>
+        <picturePath>assets\081e27da-64ae-45df-ae93-9abbcdf8ce89.jpg</picturePath>
+    </books>
+    <books>
+        <id>21</id>
+        <title>Book Review: ‘Claire McCardell,’ by Elizabeth Evitts Dickinson</title>
+        <description>Claire McCardell, pictured here in 1940, had a quietly revolutionary ethos: Women’s clothes can be practical, comfortable, stylish and affordable. And have pockets.</description>
+        <link>https://www.nytimes.com/2025/06/18/books/review/elizabeth-evitts-dickinson-claire-mccardell.html</link>
+        <publishDate>2025-06-18T09:01:07</publishDate>
+        <picturePath>assets\1990c05e-8bbd-47eb-a248-f9372a04bbe9.jpg</picturePath>
+    </books>
+    <books>
+        <id>22</id>
+        <title>Book Review: ‘The Uproar’ by Karim Dimechkie</title>
+        <description>In Karim Dimechkie’s “The Uproar,” the best-laid plans meet worst-case scenarios again and again.</description>
+        <link>https://www.nytimes.com/2025/06/18/books/review/the-uproar-karim-dimechkie.html</link>
+        <publishDate>2025-06-18T09:00:32</publishDate>
+    </books>
+    <books>
+        <id>23</id>
+        <title>Jonas Hassen Khemiri Discusses ‘The Sisters’</title>
+        <description>For the first time, Jonas Hassen Khemiri wrote a novel in English and translated it into Swedish.</description>
+        <link>https://www.nytimes.com/2025/06/17/books/jonas-hassen-khemiri-the-sisters.html</link>
+        <publishDate>2025-06-17T16:43:03</publishDate>
+        <picturePath>assets\e51ea5d9-e141-41b9-b4f5-64b9b48a0567.jpg</picturePath>
+    </books>
+    <books>
+        <id>24</id>
+        <title>Walter Brueggemann, Theologian Who Argued for the Poor, Dies at 92</title>
+        <description>He used biblical exegesis to argue that faith demands justice, calling on churches to challenge oppression and uplift society’s marginalized.</description>
+        <link>https://www.nytimes.com/2025/06/17/us/walter-brueggemann-dead.html</link>
+        <publishDate>2025-06-17T18:51:31</publishDate>
+    </books>
+    <books>
+        <id>25</id>
+        <title>Book Review: ‘Not My Type,’ by E. Jean Carroll</title>
+        <description>E. Jean Carroll’s “Not My Type” is both a memoir and a scrapbook of the two trials in which she accused President Trump of sexual assault and defamation.</description>
+        <link>https://www.nytimes.com/2025/06/17/books/review/not-my-type-e-jean-carroll.html</link>
+        <publishDate>2025-06-17T17:44:12</publishDate>
+        <picturePath>assets\d39aa0d3-ea02-4ab7-a7c3-81bec850a222.jpg</picturePath>
+    </books>
+    <books>
+        <id>26</id>
+        <title>Book Review: ‘Toni at Random: The Iconic Writer’s Legendary Editorship,’ by Dana A. Williams</title>
+        <description>In her new book, “Toni at Random,” Dana A. Williams highlights the groundbreaking writer’s time working in publishing.</description>
+        <link>https://www.nytimes.com/2025/06/17/books/review/toni-at-random-dana-a-williams.html</link>
+        <publishDate>2025-06-17T14:16:59</publishDate>
+        <picturePath>assets\b0450b02-ce7a-4088-94fa-6dedf82f1c82.jpg</picturePath>
+    </books>
+    <books>
+        <id>27</id>
+        <title>Book Review: ‘Fox,’ by Joyce Carol Oates</title>
+        <description>“Fox” details the devastation wrought by a manipulative English teacher who sexually abuses his students.</description>
+        <link>https://www.nytimes.com/2025/06/17/books/review/joyce-carol-oates-fox.html</link>
+        <publishDate>2025-06-17T14:09:58</publishDate>
+        <picturePath>assets\3bd04305-33b2-48bd-9c91-acca5bad0d52.jpg</picturePath>
+    </books>
+    <books>
+        <id>28</id>
+        <title>Book Review: ‘The Scrapbook,’ by Heather Clark</title>
+        <description>In Heather Clark’s novel, “The Scrapbook,” an American girl meets a German boy and falls head over heels — and headfirst into a history of fascism.</description>
+        <link>https://www.nytimes.com/2025/06/17/books/review/the-scrapbook-heather-clark.html</link>
+        <publishDate>2025-06-17T09:00:10</publishDate>
+    </books>
+    <books>
+        <id>29</id>
+        <title>William Langewiesche, the ‘Steve McQueen of Journalism,’ Dies at 70</title>
+        <description>William Langewiesche in 2002. For a decade, his articles were routinely finalists for the National Magazine Award, two of which won the prize.</description>
+        <link>https://www.nytimes.com/2025/06/16/business/media/william-langewiesche-dead.html</link>
+        <publishDate>2025-06-16T21:47:38</publishDate>
+        <picturePath>assets\7b8736bf-ba22-4a10-ae8f-18096f71bea9.jpg</picturePath>
+    </books>
+    <books>
+        <id>30</id>
+        <title>Book Review: ‘Bug Hollow,’ by Michelle Huneven</title>
+        <description>Michelle Huneven’s novel “Bug Hollow” begins with a tragedy in 1970s California. The ramifications are felt across three countries and five decades.</description>
+        <link>https://www.nytimes.com/2025/06/16/books/review/michelle-huneven-bug-hollow.html</link>
+        <publishDate>2025-06-17T14:08:12</publishDate>
+    </books>
+    <books>
+        <id>31</id>
+        <title>Book Review: ‘Fake Work,’ by Leigh Claire La Berge</title>
+        <description>Leigh Claire La Berge’s memoir looks back at her stint as a consultant for a Fortune 500 company at the turn of the millennium: “Is this how companies are put together?”</description>
+        <link>https://www.nytimes.com/2025/06/16/books/review/fake-work-leigh-claire-la-berge.html</link>
+        <publishDate>2025-06-16T23:36:37</publishDate>
+    </books>
+    <books>
+        <id>32</id>
+        <title>Book Review: ‘Tramps Like Us,” by Joe Westmoreland</title>
+        <description>Joe Westmoreland captures the pleasures and pains of American wanderlust in his forgotten classic “Tramps Like Us.”</description>
+        <link>https://www.nytimes.com/2025/06/16/books/review/joe-westmoreland-tramps-like-us.html</link>
+        <publishDate>2025-06-17T19:31:46</publishDate>
+    </books>
+    <books>
+        <id>33</id>
+        <title>A.I. Is Poised to Rewrite History. Literally.</title>
+        <description>The technology’s ability to read and summarize text is already making it a useful tool for scholarship. How will it change the stories we tell about the past?</description>
+        <link>https://www.nytimes.com/2025/06/16/magazine/ai-history-historians-scholarship.html</link>
+        <publishDate>2025-06-16T19:22:00</publishDate>
+    </books>
+    <books>
+        <id>34</id>
+        <title>Book Review: ‘How to Dodge a Cannonball,’ by Dennard Dayle</title>
+        <description>Dennard Dayle’s satirical new book, “How to Dodge a Cannonball,” follows a white flag-bearer pretending to be a Black soldier.</description>
+        <link>https://www.nytimes.com/2025/06/16/books/review/how-to-dodge-a-cannonball-dennard-dayle.html</link>
+        <publishDate>2025-06-17T14:12:29</publishDate>
+        <picturePath>assets\3fa2f482-a766-470d-a627-148d6a47e918.jpg</picturePath>
+    </books>
+    <books>
+        <id>35</id>
+        <title>Norma Swenson, ‘Our Bodies, Ourselves’ Co-Author, Dies at 93</title>
+        <description>She was a proponent of natural childbirth when she joined the group that produced a candid guide to women’s health. It became a cultural touchstone and a global best seller.</description>
+        <link>https://www.nytimes.com/2025/06/15/books/norma-swenson-dead.html</link>
+        <publishDate>2025-06-17T03:16:22</publishDate>
+    </books>
+    <books>
+        <id>36</id>
+        <title>Book Review: “The Möbius Book, by Catherine Lacey</title>
+        <description>Catherine Lacey’s “The Möbius Book” is both an elliptical novella and a seething memoir. Decoding the connections is at once frustrating and exhilarating.</description>
+        <link>https://www.nytimes.com/2025/06/15/books/review/the-mobius-book-catherine-lacey.html</link>
+        <publishDate>2025-06-17T14:15:01</publishDate>
+        <picturePath>assets\f453c6e4-807c-4d67-9f14-d733e1dc9b73.jpg</picturePath>
+    </books>
+    <books>
+        <id>37</id>
+        <title>Molly Recommends 2 Very Male New Novels</title>
+        <description>Johann Joachim Winckelmann and book</description>
+        <link>https://www.nytimes.com/2025/06/14/books/read-like-wind-recommendations.html</link>
+        <publishDate>2025-06-14T11:50:01</publishDate>
+        <picturePath>assets\9ceb94a7-a2f4-4d0e-ab6b-f5091ec99a8a.jpg</picturePath>
+    </books>
+    <books>
+        <id>38</id>
+        <title>Book Review: ‘Endling,’ by Maria Reva</title>
+        <description>That is, until war breaks out. “Endling,” by Maria Reva, is an ambitious whirlwind of a novel, set in Ukraine on the brink of disaster.</description>
+        <link>https://www.nytimes.com/2025/06/14/books/review/maria-reva-endling.html</link>
+        <publishDate>2025-06-14T09:00:33</publishDate>
+    </books>
+    <books>
+        <id>39</id>
+        <title>Trying to Sell a Conservative Book? Go on a Podcast.</title>
+        <description>Many of the most popular shows welcome right-wing arguments and freewheeling conversation. Publishers of other political stripes are noticing, too.</description>
+        <link>https://www.nytimes.com/2025/06/14/books/conservative-books-podcasts.html</link>
+        <publishDate>2025-06-14T09:00:23</publishDate>
+        <picturePath>assets\90d2d906-a0c7-44e9-a5a8-fb80a2bc6650.jpg</picturePath>
+    </books>
+    <books>
+        <id>40</id>
+        <title>Book Review: ‘What Is Queer Food?’ by John Birdsall and ‘Dining Out,’ by Erik Piepenburg</title>
+        <description>The late, lamented Chelsea diner Florent was a mainstay of the gay dining scene for more than 20 years.</description>
+        <link>https://www.nytimes.com/2025/06/14/books/review/john-birdsall-what-is-queer-food-erik-piepenburg-dining-out.html</link>
+        <publishDate>2025-06-14T09:00:06</publishDate>
+        <picturePath>assets\d37f2a78-ed2a-47d1-8393-79a047eab192.jpg</picturePath>
+    </books>
+    <books>
+        <id>41</id>
+        <title>Marthe Cohn, a Wartime Jewish Nurse Who Spied for the French, Dies at 105</title>
+        <description>Fluent in German and passing as an Aryan, she once crossed into Germany, uncovered Nazi military secrets and nursed a wounded, and deceived, SS officer.</description>
+        <link>https://www.nytimes.com/2025/06/13/us/marthe-cohn-dead.html</link>
+        <publishDate>2025-06-19T18:22:16</publishDate>
+    </books>
+    <books>
+        <id>42</id>
+        <title>E. Jean Carroll Chronicles Her Legal Battles With Trump in a New Book</title>
+        <description>E. Jean Carroll, at right, after a 2024 appeals court hearing on the verdict in her favor in a sexual assault and defamation case against President Trump.</description>
+        <link>https://www.nytimes.com/2025/06/13/books/review/e-jean-carroll-not-my-type-trump-trial.html</link>
+        <publishDate>2025-06-13T20:12:31</publishDate>
+        <picturePath>assets\c205fa2c-a88f-4d68-b2d5-d5a50b78f9e8.jpg</picturePath>
+    </books>
+    <books>
+        <id>43</id>
+        <title>50 Years After ‘Jaws’ Terrified Filmgoers, a Reporter Looks Back</title>
+        <description>The culture critic Brian Raftery, who wrote about “Jaws” for the Book Review last year, discusses the movie’s anniversary with Gilbert Cruz.</description>
+        <link>https://www.nytimes.com/2025/06/13/books/review/podcast-jaws-50th.html</link>
+        <publishDate>2025-06-13T17:03:04</publishDate>
+    </books>
+</booksArchive>

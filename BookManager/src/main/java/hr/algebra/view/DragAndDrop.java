@@ -36,8 +36,6 @@ import javax.xml.bind.JAXBException;
  */
 public class DragAndDrop extends javax.swing.JPanel {
 
-    private String FILENAME = "src/main/resources/userFavoriteBooks.xml";
-
     private final DefaultListModel<Book> favoriteBooksModel = new DefaultListModel<>();
     private BookRepository bookRepo;
     private BookUserRepository bookUserRepo;
@@ -67,7 +65,6 @@ public class DragAndDrop extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        btnSave = new javax.swing.JButton();
 
         addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentShown(java.awt.event.ComponentEvent evt) {
@@ -91,13 +88,6 @@ public class DragAndDrop extends javax.swing.JPanel {
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel4.setText("Drag and drop");
 
-        btnSave.setText("Save");
-        btnSave.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSaveActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -112,9 +102,7 @@ public class DragAndDrop extends javax.swing.JPanel {
                         .addGap(543, 543, 543))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btnSave, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 336, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 336, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(234, 234, 234))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(203, 203, 203)
@@ -139,9 +127,7 @@ public class DragAndDrop extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 383, Short.MAX_VALUE)
                     .addComponent(jScrollPane2))
-                .addGap(31, 31, 31)
-                .addComponent(btnSave, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(60, Short.MAX_VALUE))
+                .addContainerGap(141, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -155,30 +141,13 @@ public class DragAndDrop extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_lsFavoriteBooksMouseClicked
 
-    private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
-        try {
-            List<Book> favorites = getBooksFromModel(favoriteBooksModel);
-            UserFavorites userFavorites = new UserFavorites(user.getUsername(), favorites);
-            JAXBUtils.save(userFavorites, FILENAME);
-        } catch (JAXBException ex) {
-            MessageUtils.showErrorMessage("Error", "Error with saving xml.");
-            Logger.getLogger(DragAndDrop.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_btnSaveActionPerformed
-
     private void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown
         init();
     }//GEN-LAST:event_formComponentShown
 
-    private List<Book> getBooksFromModel(DefaultListModel<Book> model) {
-        return java.util.stream.IntStream.range(0, model.getSize())
-                .mapToObj(model::get)
-                .toList();
-    }
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnSave;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;

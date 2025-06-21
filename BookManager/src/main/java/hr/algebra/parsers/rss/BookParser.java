@@ -4,6 +4,7 @@ import hr.algebra.factory.ParserFactory;
 import hr.algebra.factory.UrlConnectionFactory;
 import hr.algebra.model.Book;
 import hr.algebra.utilities.FileUtils;
+import hr.algebra.utilities.MessageUtils;
 
 import javax.xml.namespace.QName;
 import javax.xml.stream.XMLEventReader;

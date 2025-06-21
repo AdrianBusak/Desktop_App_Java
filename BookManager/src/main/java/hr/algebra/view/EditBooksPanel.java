@@ -8,7 +8,6 @@ import hr.algebra.dal.BookRepository;
 import hr.algebra.dal.RepositoryFactory;
 import hr.algebra.model.Book;
 import hr.algebra.model.BookArchive;
-import hr.algebra.model.UserFavorites;
 import hr.algebra.utilities.FileUtils;
 import hr.algebra.utilities.IconUtils;
 import hr.algebra.utilities.JAXBUtils;
@@ -25,11 +24,9 @@ import java.util.Optional;
 import java.util.UUID;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import static javax.script.ScriptEngine.FILENAME;
 import javax.swing.JLabel;
 import javax.swing.ListSelectionModel;
 import javax.swing.text.JTextComponent;
-import javax.xml.bind.JAXBException;
 
 /**
  *
@@ -408,7 +405,15 @@ public class EditBooksPanel extends javax.swing.JPanel {
         try {
             List<Book> selectedBooks = repository.selectBooks();
             BookArchive books = new BookArchive(selectedBooks);
-            JAXBUtils.save(books, "src/main/resources/assets/xml/books.xml");
+
+            File file = new File(PATH_XML);
+
+            file.getParentFile().mkdirs();
+
+            JAXBUtils.save(books, PATH_XML);
+
+            MessageUtils.showInformationMessage("Success", "Books exported successfully to XML!");
+            
         } catch (Exception ex) {
             MessageUtils.showErrorMessage("Error with saving XML", "Error with saving XML.");
             Logger.getLogger(EditBooksPanel.class.getName()).log(Level.SEVERE, null, ex);
